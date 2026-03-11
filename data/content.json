@@ -1,0 +1,35 @@
+{
+  "en": {
+    "metaDescription": "Website for collecting all Ayturans in one place.",
+    "welcome": "Welcome",
+    "typed": [
+      "{surnameRank}th most common surname in the world",
+      "Approximately {peopleCount} people bear this surname",
+      "Most prevalent in: {country}"
+    ],
+    "description": "If you are an Ayturan and want a website or email address, send us an email.",
+    "contactLabel": "Contact email"
+  },
+  "tr": {
+    "metaDescription": "Dunyadaki butun Ayturan'larin bir araya geldigi nokta.",
+    "welcome": "Hos geldiniz",
+    "typed": [
+      "Dunyanin {surnameRank}. en yaygin soyadi",
+      "Yaklasik {peopleCount} kisi bu soyadini tasiyor",
+      "En cok gorulen ulke: {country}"
+    ],
+    "description": "Eger bir Ayturan iseniz, bir web sitesi ya da e-posta adresi almak icin bize mail atabilirsiniz.",
+    "contactLabel": "Iletisim maili"
+  },
+  "pt": {
+    "metaDescription": "Site para reunir todos os Ayturan em um so lugar.",
+    "welcome": "Bem-vindo",
+    "typed": [
+      "O {surnameRank} sobrenome mais comum do mundo",
+      "Aproximadamente {peopleCount} pessoas tem este sobrenome",
+      "Mais comum em: {country}"
+    ],
+    "description": "Se voce e um Ayturan e quer um site ou endereco de e-mail, envie um e-mail para nos.",
+    "contactLabel": "E-mail de contato"
+  }
+}

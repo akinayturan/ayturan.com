@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Website for collect all Ayturan in one place">
+    <meta name="description" content="Website for collecting all Ayturans in one place.">
     <meta name="author" content="akinayturan">
     <meta name="google-site-verification" content="9hXlCZFgeoaDzqsXjvb9lzUx5BmxFkoJ_qEXL50lI_w"/>
 
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="file/css/main.css">
 
 </head>
-<body class="layout-2">
+<body class="layout-2" data-lang="en">
 
 <!-- AUDIO TOGGLE -->
 <button class="audio-toggle wave"><i></i><i></i><i></i></button>
@@ -41,27 +41,30 @@
     <!-- LANGUAGE -->
     <nav class="menu top right language">
         <ul>
-            <li><a href="/" class="active">eng</a></li>
-            <li><a href="/tr.htm" >tr</a></li>
+            <li><a href="index.htm" class="active">eng</a></li>
+            <li><a href="tr.htm" >tr</a></li>
+            <li><a href="pt.htm">pt</a></li>
         </ul>
     </nav>
     <div class="container">
         <div class="row intro-row">
             <div class="col-md-12 intro-text">
 
-                <h2>Ayturan: <span class="typed">Welcome</span></h2>
+                <h2>Ayturan: <span class="typed" id="welcome-text">Welcome</span></h2>
 
                 <!-- TYPED STRINGS -->
-                <div class="typed-strings">
+                <div class="typed-strings" id="typed-strings">
                     <p>609,538th most common surname in the world</p>
                     <p>Approximately 352 people bear this surname</p>
-                    <p>Most prevalent in:Turkey</p>
+                    <p>Most prevalent in: Turkey</p>
                 </div>
-                <p>If u are an Ayturan, and if u want to get a website or mail adress just mail to us</p>
-                <h3>Contact email to <a href="mailto:ayturan@ayturan.com">ayturan@ayturan.com</a></h3>
-                <p class="specialay"><a href="https://akin.ayturan.com">Yasin Akın</a></p>
-                <p class="specialay"><a href="https://cansu.ayturan.com">Zeynep Cansu</a></p>
-                <p class="specialay"><a href="https://doruk.ayturan.com">Doruk</a></p>
+                <p id="intro-description">If you are an Ayturan and want a website or email address, send us an email.</p>
+                <h3><span id="contact-label">Contact email</span> <a href="mailto:ayturan@ayturan.com">ayturan@ayturan.com</a></h3>
+                <div id="name-list">
+                    <p class="specialay"><a href="https://akin.ayturan.com">Yasin Akin</a></p>
+                    <p class="specialay"><a href="https://cansu.ayturan.com">Zeynep Cansu</a></p>
+                    <p class="specialay"><a href="https://doruk.ayturan.com">Doruk</a></p>
+                </div>
             </div>
         </div>
     </div>

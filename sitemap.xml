@@ -15,11 +15,19 @@
         <changefreq>always</changefreq>
     </url>
     <url>
+        <loc>http://ayturan.com/pt.htm</loc>
+        <changefreq>always</changefreq>
+    </url>
+    <url>
         <loc>http://akin.ayturan.com/</loc>
         <changefreq>always</changefreq>
     </url>
     <url>
         <loc>http://cansu.ayturan.com/</loc>
+        <changefreq>always</changefreq>
+    </url>
+    <url>
+        <loc>http://doruk.ayturan.com/</loc>
         <changefreq>always</changefreq>
     </url>
 </urlset>

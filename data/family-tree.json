@@ -1,0 +1,278 @@
+{
+  "title": "Ayturan Family Tree",
+  "root": {
+    "people": [
+      {
+        "name": "Huri"
+      }
+    ],
+    "children": [
+      {
+        "people": [
+          {
+            "name": "Ahmet"
+          },
+          {
+            "name": "Huri"
+          }
+        ],
+        "children": [
+          {
+            "people": [
+              {
+                "name": "Saliha"
+              }
+            ]
+          },
+          {
+            "people": [
+              {
+                "name": "Hakime"
+              }
+            ]
+          },
+          {
+            "people": [
+              {
+                "name": "Ruziye"
+              },
+              {
+                "name": "Sadi"
+              }
+            ],
+            "children": [
+              {
+                "people": [
+                  {
+                    "name": "Merve"
+                  },
+                  {
+                    "name": "Oktay"
+                  }
+                ],
+                "children": [
+                  {
+                    "people": [
+                      {
+                        "name": "Mete"
+                      }
+                    ]
+                  },
+                  {
+                    "people": [
+                      {
+                        "name": "b"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Mert"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "people": [
+              {
+                "name": "İsa"
+              },
+              {
+                "name": "Mahire"
+              }
+            ],
+            "children": [
+              {
+                "people": [
+                  {
+                    "name": "Filiz"
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Koksal"
+                  }
+                ],
+                "children": [
+                  {
+                    "people": [
+                      {
+                        "name": "a"
+                      }
+                    ]
+                  },
+                  {
+                    "people": [
+                      {
+                        "name": "b"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "people": [
+              {
+                "name": "İsmet"
+              },
+              {
+                "name": "Zafer"
+              }
+            ],
+            "children": [
+              {
+                "people": [
+                  {
+                    "name": "Muhammed Şamil"
+                  },
+                  {
+                    "name": "Nursel"
+                  }
+                ],
+                "children": [
+                  {
+                    "people": [
+                      {
+                        "name": "a"
+                      }
+                    ]
+                  },
+                  {
+                    "people": [
+                      {
+                        "name": "b"
+                      }
+                    ]
+                  },
+                  {
+                    "people": [
+                      {
+                        "name": "c"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Ahmet"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "people": [
+              {
+                "name": "Ihsan"
+              },
+              {
+                "name": "Nurgul"
+              }
+            ],
+            "children": [
+              {
+                "people": [
+                  {
+                    "name": "Gulnur"
+                  },
+                  {
+                    "name": "Fatih"
+                  }
+                ],
+                "children": [
+                  {
+                    "people": [
+                      {
+                        "name": "Omer Tugra"
+                      }
+                    ]
+                  },
+                  {
+                    "people": [
+                      {
+                        "name": "Defne",
+                        "url": "https://akin.ayturan.com"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Yasin Akin",
+                    "url": "https://akin.ayturan.com"
+                  },
+                  {
+                    "name": "Zeynep Cansu",
+                    "url": "https://cansu.ayturan.com"
+                  }
+                ],
+                "children": [
+                  {
+                    "people": [
+                      {
+                        "name": "Doruk",
+                        "url": "https://doruk.ayturan.com"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "people": [
+              {
+                "name": "Remzi"
+              },
+              {
+                "name": "Nurhan"
+              }
+            ],
+            "children": [
+              {
+                "people": [
+                  {
+                    "name": "Huri"
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Ahmet"
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Zahit"
+                  }
+                ]
+              },
+              {
+                "people": [
+                  {
+                    "name": "Talha"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

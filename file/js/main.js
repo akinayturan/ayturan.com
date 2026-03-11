@@ -9,6 +9,118 @@ Version: 1.0
 (function($) {
     "use strict";
 
+    function buildTypedStrings(strings) {
+        var html = '';
+
+        $.each(strings || [], function(_, text) {
+            html += '<p>' + text + '</p>';
+        });
+
+        return html;
+    }
+
+    function resolveCountry(lang, stats) {
+        if (lang === "tr") {
+            return stats.countryTr || stats.countryEn || '';
+        }
+
+        if (lang === "pt") {
+            return stats.countryPt || stats.countryEn || '';
+        }
+
+        return stats.countryEn || '';
+    }
+
+    function applyTemplate(text, lang, stats) {
+        if (!text) {
+            return '';
+        }
+
+        return text
+            .replace(/\{surnameRank\}/g, stats.surnameRank || '')
+            .replace(/\{peopleCount\}/g, stats.peopleCount || '')
+            .replace(/\{country\}/g, resolveCountry(lang, stats));
+    }
+
+    function resolveTypedStrings(lang, content, stats) {
+        var typed = [];
+
+        $.each((content && content.typed) || [], function(_, text) {
+            typed.push(applyTemplate(text, lang, stats));
+        });
+
+        return typed;
+    }
+
+    function buildNameList(items) {
+        var html = '';
+
+        $.each(items || [], function(_, item) {
+            html += '<p class="specialay"><a href="' + item.url + '">' + item.name + '</a></p>';
+        });
+
+        return html;
+    }
+
+    function initTyped() {
+        if ($(".typed").data("typed")) {
+            $(".typed").typed("reset");
+            $(".typed").text($("#welcome-text").text());
+        }
+
+        $(".typed").typed({
+            stringsElement: $(".typed-strings"),
+            loop: true,
+            backDelay: 2000
+        });
+    }
+
+    function applySiteData(lang, content, names, stats) {
+        if (content && content.metaDescription) {
+            $('meta[name="description"]').attr('content', content.metaDescription);
+        }
+
+        if (content && content.welcome) {
+            $("#welcome-text").text(content.welcome);
+        }
+
+        if (content && content.typed) {
+            $("#typed-strings").html(buildTypedStrings(resolveTypedStrings(lang, content, stats || {})));
+        }
+
+        if (content && content.description) {
+            $("#intro-description").text(content.description);
+        }
+
+        if (content && content.contactLabel) {
+            $("#contact-label").text(content.contactLabel);
+        }
+
+        if (names) {
+            $("#name-list").html(buildNameList(names));
+        }
+
+        initTyped();
+    }
+
+    function loadDynamicContent() {
+        var lang = $("body").data("lang") || "en";
+
+        $.when(
+            $.getJSON("data/content.json"),
+            $.getJSON("data/names.json"),
+            $.getJSON("data/stats.json")
+        ).done(function(contentResponse, namesResponse, statsResponse) {
+            var contentData = contentResponse[0] || {};
+            var namesData = namesResponse[0] || [];
+            var statsData = statsResponse[0] || {};
+
+            applySiteData(lang, contentData[lang], namesData, statsData);
+        }).fail(function() {
+            initTyped();
+        });
+    }
+
     /**
      * Window Load
      */
@@ -91,11 +203,7 @@ Version: 1.0
     $(document).ready(function() {
 
         /** Typed.js (Text typing effect) */
-        $(".typed").typed({
-            stringsElement: $(".typed-strings"),
-            loop: true,
-            backDelay: 2000
-        });
+        loadDynamicContent();
 
 
         /** Navigation */

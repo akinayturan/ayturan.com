@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="google-site-verification" content="9hXlCZFgeoaDzqsXjvb9lzUx5BmxFkoJ_qEXL50lI_w"/>
+    <title>Ayturan Family Tree</title>
+    <style type="text/css" media="screen">
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #f3f0e8;
+            --card: #fffaf3;
+            --line: #cbbda8;
+            --text: #2f2419;
+            --muted: #7d6e5c;
+            --accent: #7a4b2a;
+            --shadow: 0 18px 40px rgba(78, 52, 30, 0.12);
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(255, 255, 255, 0.75), transparent 35%),
+                linear-gradient(180deg, #f6f3eb 0%, #efe7d9 100%);
+        }
+
+        .page {
+            padding: 32px 24px 48px;
+        }
+
+        .header {
+            max-width: 1100px;
+            margin: 0 auto 24px;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .title-wrap h1 {
+            font-size: clamp(28px, 4vw, 44px);
+            letter-spacing: 0.03em;
+            margin-bottom: 6px;
+        }
+
+        .title-wrap p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .menu ul {
+            display: flex;
+            gap: 14px;
+            list-style: none;
+        }
+
+        .menu a {
+            color: var(--accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 2px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            border-color: var(--accent);
+        }
+
+        .tree-shell {
+            max-width: 100%;
+            overflow: auto;
+            padding: 12px;
+        }
+
+        .tree-board {
+            min-width: max-content;
+            width: fit-content;
+            margin: 0 auto;
+            padding: 28px;
+            background: rgba(255, 250, 243, 0.82);
+            border: 1px solid rgba(122, 75, 42, 0.12);
+            border-radius: 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .tree ul {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            padding-top: 30px;
+            position: relative;
+            list-style: none;
+        }
+
+        .tree ul::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 30px;
+            background: var(--line);
+            transform: translateX(-50%);
+        }
+
+        .tree > ul {
+            padding-top: 0;
+        }
+
+        .tree > ul::before {
+            display: none;
+        }
+
+        .tree li {
+            position: relative;
+            padding: 30px 10px 0;
+            text-align: center;
+        }
+
+        .tree li::before,
+        .tree li::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: 30px;
+            border-top: 1px solid var(--line);
+        }
+
+        .tree li::before {
+            right: 50%;
+        }
+
+        .tree li::after {
+            left: 50%;
+            border-left: 1px solid var(--line);
+        }
+
+        .tree li:only-child {
+            padding-top: 0;
+        }
+
+        .tree li:only-child::before,
+        .tree li:only-child::after {
+            display: none;
+        }
+
+        .tree li:first-child::before,
+        .tree li:last-child::after {
+            border-top: 0;
+        }
+
+        .tree li:last-child::before {
+            border-right: 1px solid var(--line);
+            border-radius: 0 16px 0 0;
+        }
+
+        .tree li:first-child::after {
+            border-radius: 16px 0 0 0;
+        }
+
+        .node {
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px;
+            min-width: 140px;
+            max-width: 240px;
+            background: var(--card);
+            border: 1px solid rgba(122, 75, 42, 0.18);
+            border-radius: 18px;
+            box-shadow: 0 10px 22px rgba(78, 52, 30, 0.08);
+            position: relative;
+        }
+
+        .person {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 40px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(122, 75, 42, 0.14);
+            background: #fff;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.2;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .person:hover {
+            transform: translateY(-1px);
+            border-color: rgba(122, 75, 42, 0.35);
+            box-shadow: 0 8px 16px rgba(78, 52, 30, 0.12);
+        }
+
+        .status {
+            max-width: 1100px;
+            margin: 16px auto 0;
+            color: var(--muted);
+            text-align: center;
+            font-size: 14px;
+        }
+
+        @media (max-width: 720px) {
+            .page {
+                padding: 20px 12px 32px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tree-board {
+                padding: 20px 14px;
+            }
+
+            .node {
+                min-width: 124px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="title-wrap">
+            <h1 id="tree-title">Ayturan Family Tree</h1>
+        </div>
+    </header>
+
+    <div class="tree-shell">
+        <div class="tree-board">
+            <div class="tree" id="family-tree"></div>
+        </div>
+    </div>
+
+    <p class="status" id="tree-status">Loading family tree...</p>
+</div>
+
+<script>
+    function escapeHtml(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+    }
+
+    function buildPeople(people) {
+        return (people || []).map(function (person) {
+            var name = escapeHtml(person.name || "");
+            var url = person.url ? escapeHtml(person.url) : "#";
+            var target = person.url ? ' target="_blank" rel="noreferrer"' : "";
+            return '<a class="person" href="' + url + '"' + target + '>' + name + '</a>';
+        }).join("");
+    }
+
+    function buildNode(node) {
+        var children = Array.isArray(node.children) ? node.children : [];
+        var childMarkup = "";
+
+        if (children.length) {
+            childMarkup = "<ul>" + children.map(function (child) {
+                return "<li>" + buildNode(child) + "</li>";
+            }).join("") + "</ul>";
+        }
+
+        return '<div class="node">' + buildPeople(node.people) + "</div>" + childMarkup;
+    }
+
+    function renderTree(data) {
+        var title = data.title || "Ayturan Family Tree";
+        var root = data.root || {};
+
+        document.getElementById("tree-title").textContent = title;
+        document.getElementById("family-tree").innerHTML = "<ul><li>" + buildNode(root) + "</li></ul>";
+        document.getElementById("tree-status").textContent = "Family tree loaded.";
+    }
+
+    fetch("data/family-tree.json")
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Failed to load family tree");
+            }
+            return response.json();
+        })
+        .then(renderTree)
+        .catch(function () {
+            document.getElementById("tree-status").textContent = "Family tree could not be loaded.";
+        });
+</script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-26694472-4', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript"> (function (d, w, c) {
+    (w[c] = w[c] || []).push(function () {
+        try {
+            w.yaCounter38798130 = new Ya.Metrika({
+                id: 38798130,
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true
+            });
+        } catch (e) {
+        }
+    });
+    var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+        n.parentNode.insertBefore(s, n);
+    };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "https://mc.yandex.ru/metrika/watch.js";
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else {
+        f();
+    }
+})(document, window, "yandex_metrika_callbacks"); </script>
+<noscript>
+    <div><img src="https://mc.yandex.ru/watch/38798130" style="position:absolute; left:-9999px;" alt=""/></div>
+</noscript> <!-- /Yandex.Metrika counter -->
+</body>
+</html>
