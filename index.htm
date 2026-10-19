@@ -1,100 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Website for collecting all Ayturans in one place.">
-    <meta name="author" content="akinayturan">
-    <meta name="google-site-verification" content="9hXlCZFgeoaDzqsXjvb9lzUx5BmxFkoJ_qEXL50lI_w"/>
-
-    <link rel="icon" href="file/favicon.png">
-    <title>Ayturan</title>
-
-    <!-- BOOTSTRAP CORE CSS -->
-    <link rel="stylesheet" href="file/css/vendor/bootstrap.min.css">
-    <!-- PLUGIN STYLES FOR THIS TEMPLATE -->
-    <link rel="stylesheet" href="file/css/vendor/magnific-popup.css">
-    <link rel="stylesheet" href="file/css/vendor/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="file/css/vendor/particles-anim.css">
-    <!-- MAIN STYLE FOR THIS TEMPLATE -->
-    <link rel="stylesheet" href="file/css/main.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A shared home for the Ayturan family. Connected by name. Rooted in family.">
+  <meta name="theme-color" content="#091f28">
+  <title>Ayturan — Shared Roots, Open Horizons</title>
+  <link rel="canonical" href="https://ayturan.com/">
+  <link rel="alternate" hreflang="en" href="https://ayturan.com/">
+  <link rel="alternate" hreflang="tr" href="https://ayturan.com/tr.htm">
+  <link rel="alternate" hreflang="x-default" href="https://ayturan.com/">
+  <link rel="icon" href="file/favicon.png">
+  <link rel="stylesheet" href="file/css/night.css?v=20261019-7">
+  <link rel="stylesheet" href="file/css/turan.css?v=20261019-7">
+  <script src="file/js/site.js?v=20261019-7" defer></script>
 </head>
-<body class="layout-2" data-lang="en">
+<body>
+  <a class="skip" href="#family">Skip to the family</a>
+  <header class="header frame">
+    <nav aria-label="Main navigation"><a href="#family">Our people</a><a href="mailto:ayturan@ayturan.com">Say hello</a></nav>
+    <nav class="language-switch" aria-label="Language"><a href="index.htm" lang="en" aria-current="page">EN</a><a href="tr.htm" lang="tr">TR</a></nav>
+  </header>
+  <main>
+    <section class="hero frame" aria-labelledby="hero-title">
+      <div class="hero-top"><p class="label"><span class="tiny-star" aria-hidden="true">✦</span> Shared roots. Open horizons.</p><span class="edition">THE AYTURAN FAMILY</span></div>
+      <div class="moon-orbit" aria-hidden="true"><div class="moon-disc"></div><span class="orbit-point"></span></div>
+      <svg class="horizon" viewBox="0 0 1240 150" preserveAspectRatio="none" fill="none" aria-hidden="true"><path d="M0 125L115 113L180 119L290 83L355 100L455 52L525 77L610 45L710 89L790 63L900 105L990 74L1080 99L1160 89L1240 111"/><path d="M0 142L140 130L260 137L390 112L490 121L620 99L750 125L900 115L1040 138L1140 124L1240 130"/></svg>
+      <div class="hero-type"><h1 id="hero-title" aria-label="Ayturan"><span class="hero-ay">AY</span><span class="hero-turan">TURAN</span><span class="title-dot">.</span></h1><div class="hero-under"><span class="small-rule" aria-hidden="true"></span><p>A name that connects us.<br><em>A horizon we share.</em></p></div></div>
+      <div class="hero-bottom"><p>Different lives. Different places.<br>A little corner of the world that brings us together.</p><a href="#family" class="explore">Meet our people <span aria-hidden="true">↓</span></a><span class="vertical-note">ONE NAME. MANY STORIES.</span></div>
+    </section>
 
-<!-- AUDIO TOGGLE -->
-<button class="audio-toggle wave"><i></i><i></i><i></i></button>
+    <section class="facts frame" aria-label="Surname facts"><div class="facts-caption"><span class="label">A name in the world</span><p>A few numbers.<br>A much bigger story.</p></div><div class="fact"><strong id="people-count">—</strong><span>people share the name*</span></div><div class="fact"><strong id="surname-rank">—</strong><span>worldwide surname rank*</span></div><div class="fact"><strong id="country">—</strong><span>where our name is most prevalent*</span></div></section>
 
-<!-- NAV SOCIAL -->
-<div class="nav-social">
-</div>
+    <section class="family frame" id="family" aria-labelledby="family-title">
+      <div class="section-intro"><span class="label">Our people</span><h2 id="family-title">Their own worlds.<br><em>Our shared name.</em></h2><p>Follow a familiar name.<br>Discover a personal story.</p></div>
+      <div class="directory"><div class="directory-head"><span>THE FAMILY DIRECTORY</span><span>EXPLORE THEIR WEBSITES ↗</span></div><div id="members" class="members" aria-live="polite"><p>Loading our people…</p></div><p class="directory-note">Part of the family? <a href="mailto:ayturan@ayturan.com">Make yourself at home ↗</a></p></div>
+    </section>
 
-<!-- BACKGROUND PARTICLES -->
-<div class="main-bg bg-image overlay" style="background-color: #222;">
-    <div id="particles-js"></div>
-</div>
-
-<!-- INTRO SECTION -->
-<div id="intro" class="section-intro">
-
-    <!-- LANGUAGE -->
-    <nav class="menu top right language">
-        <ul>
-            <li><a href="index.htm" class="active">en</a></li>
-            <li><a href="tr.htm" >tr</a></li>
-            <li><a href="pt.htm">pt</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="row intro-row">
-            <div class="col-md-12 intro-text">
-
-                <h2>Ayturan: <span class="typed" id="welcome-text">Welcome</span></h2>
-
-                <!-- TYPED STRINGS -->
-                <div class="typed-strings" id="typed-strings">
-                    <p>609,538th most common surname in the world</p>
-                    <p>Approximately 352 people bear this surname</p>
-                    <p>Most prevalent in: Turkey</p>
-                </div>
-                <p id="intro-description">If you are an Ayturan and want a website or email address, send us an email.</p>
-                <h3><span id="contact-label">Contact email</span> <a href="mailto:ayturan@ayturan.com">ayturan@ayturan.com</a></h3>
-                <div id="name-list">
-                    <p class="specialay"><a href="https://akin.ayturan.com">Yasin Akin</a></p>
-                    <p class="specialay"><a href="https://cansu.ayturan.com">Zeynep Cansu</a></p>
-                    <p class="specialay"><a href="https://doruk.ayturan.com">Doruk</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- /END INTRO SECTION -->
-<!-- jQuery -->
-<script src="file/js/vendor/jquery.min.js"></script>
-<!-- BOOTSTRAP CORE JAVASCRIPT -->
-<script src="file/js/vendor/bootstrap.min.js"></script>
-<!-- PLUGIN SCRIPTS FOR THIS TEMPLATE -->
-<script src="file/js/vendor/plugins.js"></script>
-<script src="file/js/vendor/particles.min.js"></script>
-<script src="file/js/vendor/particles-anim.js"></script>
-<!-- MAIN SCRIPT FOR THIS TEMPLATE -->
-<script src="file/js/main.js"></script>
-<script>
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-26694472-4', 'auto');
-    ga('send', 'pageview');
-</script>
+  </main>
+  <footer class="frame"><a class="brand" href="index.htm" aria-label="Ayturan home"><span class="brand-ay">AY</span><span class="brand-turan">TURAN</span><span class="brand-dot">.</span></a><span>Shared roots. Open horizons.</span><a href="#hero-title">Back to top ↑</a></footer>
+  <p class="data-note frame">* Approximate figures from the existing surname dataset. Source and collection date have not been verified.</p>
 </body>
 </html>

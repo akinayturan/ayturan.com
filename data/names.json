@@ -1,6 +1,7 @@
 [
   {
-    "name": "Yasin Akin",
+    "name": "Yasin Akın Ayturan",
+    "birthYear": 1990,
     "url": "https://akin.ayturan.com"
   },
   {
@@ -8,7 +9,8 @@
     "url": "https://cansu.ayturan.com"
   },
   {
-    "name": "Doruk",
+    "name": "Doruk Ayturan",
+    "birthYear": 2018,
     "url": "https://doruk.ayturan.com"
   }
 ]
